@@ -33,7 +33,7 @@ app.post('/', async (req, res) => {
 
 })
 
-app.listen(port, () => console.log('Server is running'));
+app.listen(process.env.PORT || port, () => console.log('Server is running'));
 
 async function fetchHtml(id) {
     const url = `https://www.youtube.com/results?search_query=${id}`;
