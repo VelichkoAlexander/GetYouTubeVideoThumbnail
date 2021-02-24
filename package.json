@@ -1,5 +1,5 @@
 {
-  "name": "nodeYoutubeApp",
+  "name": "node-youtube-app",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "pug": "^3.0.0"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   }
 }
