@@ -47,13 +47,12 @@ async function fetchHtml(id) {
 
 async function getThumbnail(id) {
   const html = await fetchHtml(id);
-  console.log(html);
   const pattern = `(https:\/\/i\.ytimg\.com\/an_webp\/${id}/mqdefault.+?)",`
   const regx = new RegExp(pattern, 'gi');
-  console.log(regx);
   const results = html.match(regx);
-  console.log(results);
+  if (!results && 0 === result.length) {
+    return '';
+  }
   const [result] = results;
-  console.log(result);
   return result.replace(`",`, '').replace(/\\u0026/g, '&');
 }
