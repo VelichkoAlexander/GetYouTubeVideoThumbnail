@@ -5,6 +5,6 @@ import result from './result.js'
 router.use('/result', result);
 
 // Index page route
-router.get('/', (req, res) => res.render('pages/index', {title: 'Hey', message: 'Hello there!'}));
+router.get('/', (req, res) => res.render('pages/home', {title: 'Hey', message: 'Get YouTube Video Preview Thumbnail!'}));
 
 export default router;

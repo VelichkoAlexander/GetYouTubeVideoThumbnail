@@ -1,7 +1,10 @@
-html
-    head
-        title= title
-    body
-        img(src=`/${url}` alt="")
+extends ../index.pug
+block content
+  .container
+    .py-5.text-center
+      figure.figure
+        figcaption.figure-caption Your video preview
+        img.mb5.figure-img.img-fluid.rounded(src=`/${url}` alt="")
         pre= `siteurl/${url}`
-        a(href=`/${url}`) link
+    .row
+      a(href="/") < Back
