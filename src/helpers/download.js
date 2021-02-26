@@ -3,9 +3,9 @@ import fs from 'fs';
 import {nanoid} from 'nanoid'
 
 export default (url) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const fileName = `${nanoid()}.webp`
-    let file = fs.createWriteStream(`./files/${fileName}`);
+    let file = fs.createWriteStream(`./public/files/${fileName}`);
     https.get(url, function (response) {
       response.on('data', function (chunk) {
         file.write(chunk)
