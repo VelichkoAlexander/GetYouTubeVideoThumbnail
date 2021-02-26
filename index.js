@@ -47,6 +47,7 @@ async function fetchHtml(id) {
 
 async function getThumbnail(id) {
   const html = await fetchHtml(id);
+  console.log(html);
   const pattern = `(https:\/\/i\.ytimg\.com\/an_webp\/${id}/mqdefault.+?)",`
   const regx = new RegExp(pattern, 'gi');
   const results = html.match(regx);
