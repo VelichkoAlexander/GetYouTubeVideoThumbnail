@@ -6,11 +6,12 @@ const result = async (req, res) => {
     const {youtubeId} = req.body;
     const url = await getThumbnail(youtubeId);
     const localUrl = await downloadFile(url);
-    console.log(localUrl);
+    const {hostname} = req;
     res.render('pages/result',
       {
         title: 'Result',
         url: localUrl,
+        hostname,
       });
   } catch (e) {
     console.log(e)
