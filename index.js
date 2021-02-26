@@ -50,6 +50,7 @@ async function getThumbnail(id) {
   console.log(html);
   const pattern = `(https:\/\/i\.ytimg\.com\/an_webp\/${id}/mqdefault.+?)",`
   const regx = new RegExp(pattern, 'gi');
+  console.log(regx);
   const results = html.match(regx);
   console.log(results);
   const [result] = results;
